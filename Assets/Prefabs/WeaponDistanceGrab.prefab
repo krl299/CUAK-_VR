@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 4410498321569509593}
   - component: {fileID: 4665368079691405468}
   - component: {fileID: 8373585534311290954}
+  - component: {fileID: -5639009929735543012}
   m_Layer: 8
   m_Name: WeaponDistanceGrab
   m_TagString: Untagged
@@ -250,6 +251,7 @@ Transform:
   m_Children:
   - {fileID: 4394716940026253080}
   - {fileID: 6134462311983416746}
+  - {fileID: 2589691423498938459}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8174290404007701367
@@ -368,6 +370,52 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   m_materialColorField: _OutlineColor
+--- !u!114 &-5639009929735543012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8406873535941976954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd512a059c063841b482b3e1dff84a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 2425712545966699041, guid: a7d5615048707704ca0c137525dcf9ad, type: 3}
+  shootForce: 25
+  shootPoint: {fileID: 2589691423498938459}
+--- !u!1 &8767797924170372812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2589691423498938459}
+  m_Layer: 8
+  m_Name: FirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2589691423498938459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8767797924170372812}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.04, y: -0.01, z: 2.64}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1487489348168402958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6138177129061122840
 PrefabInstance:
   m_ObjectHideFlags: 0
