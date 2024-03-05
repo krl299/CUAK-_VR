@@ -1,12 +1,22 @@
+using System;
+using Oculus.Platform;
 using OculusSampleFramework;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponSystem : MonoBehaviour
 {
-    public GameObject bullet;
-    public float shootForce;
-    public Transform shootPoint;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] private float shootForce;
+    [SerializeField] private Transform shootPoint;
+    [SerializeField] private Hand hand;
     private DistanceGrabbable _distanceGrabbable;
+    
+    enum Hand
+    {
+        Left,
+        Right
+    }
 
     private void Awake()
     {
@@ -17,9 +27,21 @@ public class WeaponSystem : MonoBehaviour
     {
         if (_distanceGrabbable.isGrabbed)
         {
-            if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+            if (hand == Hand.Left)
             {
-                Instantiate(bullet, shootPoint.position, shootPoint.rotation).GetComponent<Rigidbody>().AddForce(shootPoint.forward * shootForce);
+                if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
+                {
+                    Instantiate(bullet, shootPoint.position, shootPoint.rotation).GetComponent<Rigidbody>()
+                        .AddForce(shootPoint.forward * shootForce);
+                }
+            }
+            else if (hand == Hand.Right)
+            {
+                if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
+                {
+                    Instantiate(bullet, shootPoint.position, shootPoint.rotation).GetComponent<Rigidbody>()
+                        .AddForce(shootPoint.forward * shootForce);
+                }
             }
         }
     }

@@ -1357,6 +1357,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4515048727945810, guid: ea7023a21c9958f439273c740ffccda8, type: 3}
   m_PrefabInstance: {fileID: 277695829}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &491038517
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -5639009929735543012, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: hand
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1716019
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4410498321569509593, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b87350cf1f6974596d848c151583af, type: 2}
+    - target: {fileID: 6160270762711597618, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a5b87350cf1f6974596d848c151583af, type: 2}
+    - target: {fileID: 8406873535941976954, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_Name
+      value: WeaponDistanceGrabRight
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
 --- !u!114 &524439193 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8395562963090074655, guid: 9dd100b56a9577e4db0124f86a5ba1fd, type: 3}
@@ -2551,6 +2620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5639009929735543012, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: hand
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1487489348168402958, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.213512
@@ -2591,9 +2664,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6134462311983416746, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134462311983416746, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6134462311983416746, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6160270762711597618, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e200267462ffd04bb3d44a6034b3c2b, type: 2}
     - target: {fileID: 8406873535941976954, guid: 8a2ae79f156cf8d4dbaafba1394325f9, type: 3}
       propertyPath: m_Name
-      value: WeaponDistanceGrab
+      value: WeaponDistanceGrabLeft
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5333,3 +5422,4 @@ SceneRoots:
   - {fileID: 971295461}
   - {fileID: 1302097010}
   - {fileID: 930035158}
+  - {fileID: 491038517}
