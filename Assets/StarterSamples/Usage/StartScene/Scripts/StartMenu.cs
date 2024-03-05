@@ -33,16 +33,16 @@ public class StartMenu : MonoBehaviour
 
     void Start()
     {
-        DebugUIBuilder.instance.AddLabel("Select Sample Scene");
+        DebugUIBuilder.instance.AddLabel("Press Start to begin.");
 
         int n = UnityEngine.SceneManagement.SceneManager.sceneCountInBuildSettings;
-        for (int i = 0; i < n; ++i)
+        for (int i = 1; i < n; ++i)
         {
             string path = UnityEngine.SceneManagement.SceneUtility.GetScenePathByBuildIndex(i);
             var sceneIndex = i;
             DebugUIBuilder.instance.AddButton(Path.GetFileNameWithoutExtension(path), () => LoadScene(sceneIndex));
         }
-
+        
         DebugUIBuilder.instance.Show();
     }
 
