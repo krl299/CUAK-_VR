@@ -47,7 +47,7 @@ public class ZombieController : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            //HUDController.instance.ScoreIncrement(enemyScorePoint);
+            player.AddScore(enemyScorePoint);
             Destroy(gameObject);
         }
     }
@@ -56,10 +56,10 @@ public class ZombieController : MonoBehaviour
     private void Update()
     {
         //5m start chasing the player
-        playerIsNear = Vector3.Distance(transform.position, player.transform.position) < 10;
+        playerIsNear = Vector3.Distance(transform.position, player.transform.position) < 20;
 
         //1m start attacking the player
-        withinAttackRange = Vector3.Distance(transform.position, player.transform.position) < 5;
+        withinAttackRange = Vector3.Distance(transform.position, player.transform.position) < 10;
     }
 
     //----------------------------------------------------------------

@@ -62,7 +62,7 @@ namespace OculusSampleFramework
         // Use this for initialization
         void Start()
         {
-            DebugUIBuilder.instance.AddLabel("Distance Grab Sample");
+            /*DebugUIBuilder.instance.AddLabel("Distance Grab Sample");
             DebugUIBuilder.instance.AddToggle("Use Spherecasting", ToggleSphereCasting, useSpherecast);
             DebugUIBuilder.instance.AddToggle("Grab Through Walls", ToggleGrabThroughWalls, allowGrabThroughWalls);
             DebugUIBuilder.instance.Show();
@@ -74,7 +74,7 @@ namespace OculusSampleFramework
             {
                 Debug.Log("Setting Time.fixedDeltaTime to: " + (1.0f / freq));
                 Time.fixedDeltaTime = 1.0f / freq;
-            }
+            }*/
         }
 
         public void ToggleSphereCasting(Toggle t)

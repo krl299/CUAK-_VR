@@ -11,6 +11,7 @@ public class WeaponSystem : MonoBehaviour
     [SerializeField] private Transform shootPoint;
     [SerializeField] private Hand hand;
     private DistanceGrabbable _distanceGrabbable;
+    [SerializeField] private AudioSource shotSound;
     
     enum Hand
     {
@@ -31,6 +32,7 @@ public class WeaponSystem : MonoBehaviour
             {
                 if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
                 {
+                    shotSound.Play();
                     Instantiate(bullet, shootPoint.position, shootPoint.rotation).GetComponent<Rigidbody>()
                         .AddForce(shootPoint.forward * shootForce);
                 }
@@ -39,6 +41,7 @@ public class WeaponSystem : MonoBehaviour
             {
                 if (OVRInput.GetDown(OVRInput.Button.SecondaryIndexTrigger))
                 {
+                    shotSound.Play();
                     Instantiate(bullet, shootPoint.position, shootPoint.rotation).GetComponent<Rigidbody>()
                         .AddForce(shootPoint.forward * shootForce);
                 }

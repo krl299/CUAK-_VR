@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,41 +9,53 @@ public class PlayerController : MonoBehaviour
     [Header("Lives")]
     public int currentLives;
     [SerializeField] private int maxLives;
-
-    private Camera camera;
-    private Rigidbody rb;
-    //private GunController weaponController;
-
-    public int MaxLives { get => maxLives; set => maxLives = value; }
-
-    private void Awake()
-    {
-        rb = GetComponent<Rigidbody>();
-        camera = Camera.main;
-        //weaponController = GetComponent<GunController>();
-
-    }
+    [SerializeField] private GameObject hudPlayer;
+    private int score;
 
     private void Start()
     {
-        //Update Player Healt Bar with the max 
-        //HUDController.instance.UpdateHealthBar(MaxLives);
+        hudPlayer.SetActive(false);
     }
 
     public void DamagePlayer(int quantity)
     {
         currentLives -= quantity;
-        //HUDController.instance.UpdateHealthBar(currentLives);
-
-        //HUDController.instance.ShowDamageFlash();
 
         if (currentLives <= 0)
         {
-
-            //GameManager.Instance.LoseGame();
-
-            Debug.Log("GAME OVER!!!");
+            //TODO: Game Over Panel and Win Panel
+            StartCoroutine(ReturnMainScene(5, false));
+            Debug.Log("ZAMATAOOO!!!");
         }
+    }
 
+    public IEnumerator ReturnMainScene(int seconds, bool live)
+    {
+        hudPlayer.SetActive(true);
+        if (live)
+        {
+            hudPlayer.GetComponentInChildren<TextMeshProUGUI>().text =
+                "You Win!\nScore: " + score.ToString();
+        }
+        else
+        {
+            hudPlayer.GetComponentInChildren<TextMeshProUGUI>().text =
+                "You Lose!\nScore: " + score.ToString();
+        }
+        yield return new WaitForSeconds(seconds);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Win"))
+        {
+            StartCoroutine(ReturnMainScene(5, true));
+        }
+    }
+
+    public void AddScore(int quantity)
+    {
+        score += quantity;
     }
 }

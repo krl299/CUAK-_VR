@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4312129942115852419, guid: a47f75a4aeb9a9a49b424c8819829abf, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4312129942115852419, guid: a47f75a4aeb9a9a49b424c8819829abf, type: 3}
+      propertyPath: target
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4782117198589176412, guid: a47f75a4aeb9a9a49b424c8819829abf, type: 3}
       propertyPath: m_Radius
       value: 0.01
